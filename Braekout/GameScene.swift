@@ -15,12 +15,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var paddle = SKSpriteNode()
     var brick = SKSpriteNode()
     var loseZone = SKSpriteNode()
+    var bricks = [SKSpriteNode]()
     
     override func didMove(to view: SKView) {
         createBackground()
         makeBall()
         makePaddle()
-        makeBrick()
+        makeBricks()
         makeLoseZone()
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
@@ -78,13 +79,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(paddle)
     }
     
-    func makeBrick() {
-        brick = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 50, height: 20))
-        brick.position = CGPoint(x: frame.midX, y: frame.maxY - 50)
+    func makeBrick(x: Int, y: Int, color: UIColor) {
+        brick = SKSpriteNode(color: color, size: CGSize(width: 50, height: 20))
+        brick.position = CGPoint(x: x, y: y)
         brick.name = "brick"
         brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
         brick.physicsBody?.isDynamic = false
         addChild(brick)
+    }
+    
+    func makeBricks() {
+        let row = Int((frame.maxX-frame.minX)/55)
+        for s in 1...3 {
+            for i in 0..<row {
+                makeBrick(x:55*(i)+Int(frame.minX)+40, y:Int(frame.maxY) - 50*s, color: UIColor.gray)
+                bricks.append(brick)
+            }
+        }
     }
     
     func makeLoseZone() {
@@ -124,18 +135,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.node?.name == "brick" ||
-            contact.bodyB.node?.name == "brick" {
-            print("You win!")
-            brick.removeFromParent()
-            ball.removeFromParent()
-        }
-        if contact.bodyA.node?.name == "loseZone" ||
-            contact.bodyB.node?.name == "loseZone" {
-            print("You lose!")
-            ball.removeFromParent()
-        }
-    }
+//    func didBegin(_ contact: SKPhysicsContact) {
+//        if contact.bodyA.node?.name == "brick" ||
+//            contact.bodyB.node?.name == "brick" {
+//            print("You win!")
+//            brick.removeFromParent()
+//            ball.removeFromParent()
+//        }
+//        if contact.bodyA.node?.name == "loseZone" ||
+//            contact.bodyB.node?.name == "loseZone" {
+//            print("You lose!")
+//            ball.removeFromParent()
+//        }
+//    }
     
 }
