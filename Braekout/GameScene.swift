@@ -79,23 +79,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(paddle)
     }
     
-    func makeBrick(x: Int, y: Int, color: UIColor) {
+    func makeBrick(x: Int, y: Int, color: UIColor, index: Int) {
         brick = SKSpriteNode(color: color, size: CGSize(width: 50, height: 20))
         brick.position = CGPoint(x: x, y: y)
-        brick.name = "brick"
+        brick.name = "brick\(index)"
         brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
         brick.physicsBody?.isDynamic = false
+        brick.color = color
         addChild(brick)
     }
     
     func makeBricks() {
-        let row = Int((frame.maxX-frame.minX)/55)
-        for s in 1...3 {
-            for i in 0..<row {
-                makeBrick(x:55*(i)+Int(frame.minX)+40, y:Int(frame.maxY) - 50*s, color: UIColor.gray)
-                bricks.append(brick)
-            }
+        for i in 0..<7 {
+            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 50, color: UIColor.green, index: i)
+            bricks.append(brick)
         }
+        for i in 0..<7 {
+            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 100, color: UIColor.green, index: i + 7)
+            bricks.append(brick)
+        }
+        for i in 0..<7 {
+            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 150, color: UIColor.green, index: i + 14)
+            bricks.append(brick)
+        }
+        print(bricks)
     }
     
     func makeLoseZone() {
@@ -125,7 +132,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.location(in: self)
             paddle.position.x = location.x
         }
-
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -135,18 +142,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-//    func didBegin(_ contact: SKPhysicsContact) {
-//        if contact.bodyA.node?.name == "brick" ||
-//            contact.bodyB.node?.name == "brick" {
-//            print("You win!")
-//            brick.removeFromParent()
-//            ball.removeFromParent()
-//        }
-//        if contact.bodyA.node?.name == "loseZone" ||
-//            contact.bodyB.node?.name == "loseZone" {
-//            print("You lose!")
-//            ball.removeFromParent()
-//        }
-//    }
+    func didBegin(_ contact: SKPhysicsContact) {
+        for i in 0..<21 {
+            if contact.bodyA.node?.name == "brick\(i)" ||
+                contact.bodyB.node?.name == "brick\(i)" {
+                if bricks[i].color == (UIColor.green) {
+                    bricks[i].color = .blue
+                }
+                else if bricks[i].color == .blue {
+                    bricks[i].color = UIColor.red
+                }
+                else if bricks[i].color == .red {
+                    bricks[i].removeFromParent()
+                }
+            }
+            if contact.bodyA.node?.name == "loseZone" ||
+                contact.bodyB.node?.name == "loseZone" {
+                ball.removeFromParent()
+            }
+        }
+        
+    }
     
 }
