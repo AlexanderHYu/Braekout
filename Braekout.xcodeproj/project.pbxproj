@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B55C82322D787AB00CF9BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55C82222D787AB00CF9BF3 /* AppDelegate.swift */; };
+		5B55C82522D787AB00CF9BF3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B55C82422D787AB00CF9BF3 /* GameScene.sks */; };
+		5B55C82722D787AB00CF9BF3 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B55C82622D787AB00CF9BF3 /* Actions.sks */; };
+		5B55C82922D787AB00CF9BF3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55C82822D787AB00CF9BF3 /* GameScene.swift */; };
+		5B55C82B22D787AB00CF9BF3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55C82A22D787AB00CF9BF3 /* GameViewController.swift */; };
+		5B55C82E22D787AB00CF9BF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B55C82C22D787AB00CF9BF3 /* Main.storyboard */; };
+		5B55C83022D787AD00CF9BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B55C82F22D787AD00CF9BF3 /* Assets.xcassets */; };
+		5B55C83322D787AD00CF9BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B55C83122D787AD00CF9BF3 /* LaunchScreen.storyboard */; };
+		5B55C83E22D787AD00CF9BF3 /* BraekoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55C83D22D787AD00CF9BF3 /* BraekoutTests.swift */; };
+		5B55C84922D787AD00CF9BF3 /* BraekoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55C84822D787AD00CF9BF3 /* BraekoutUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B55C83A22D787AD00CF9BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B55C81722D787AB00CF9BF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B55C81E22D787AB00CF9BF3;
+			remoteInfo = Braekout;
+		};
+		5B55C84522D787AD00CF9BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B55C81722D787AB00CF9BF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B55C81E22D787AB00CF9BF3;
+			remoteInfo = Braekout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B55C81F22D787AB00CF9BF3 /* Braekout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Braekout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B55C82222D787AB00CF9BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B55C82422D787AB00CF9BF3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5B55C82622D787AB00CF9BF3 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		5B55C82822D787AB00CF9BF3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5B55C82A22D787AB00CF9BF3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5B55C82D22D787AB00CF9BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B55C82F22D787AD00CF9BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B55C83222D787AD00CF9BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B55C83422D787AD00CF9BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B55C83922D787AD00CF9BF3 /* BraekoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraekoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B55C83D22D787AD00CF9BF3 /* BraekoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraekoutTests.swift; sourceTree = "<group>"; };
+		5B55C83F22D787AD00CF9BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B55C84422D787AD00CF9BF3 /* BraekoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraekoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B55C84822D787AD00CF9BF3 /* BraekoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraekoutUITests.swift; sourceTree = "<group>"; };
+		5B55C84A22D787AD00CF9BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B55C81C22D787AB00CF9BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B55C83622D787AD00CF9BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B55C84122D787AD00CF9BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B55C81622D787AB00CF9BF3 = {
+			isa = PBXGroup;
+			children = (
+				5B55C82122D787AB00CF9BF3 /* Braekout */,
+				5B55C83C22D787AD00CF9BF3 /* BraekoutTests */,
+				5B55C84722D787AD00CF9BF3 /* BraekoutUITests */,
+				5B55C82022D787AB00CF9BF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B55C82022D787AB00CF9BF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B55C81F22D787AB00CF9BF3 /* Braekout.app */,
+				5B55C83922D787AD00CF9BF3 /* BraekoutTests.xctest */,
+				5B55C84422D787AD00CF9BF3 /* BraekoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B55C82122D787AB00CF9BF3 /* Braekout */ = {
+			isa = PBXGroup;
+			children = (
+				5B55C82222D787AB00CF9BF3 /* AppDelegate.swift */,
+				5B55C82422D787AB00CF9BF3 /* GameScene.sks */,
+				5B55C82622D787AB00CF9BF3 /* Actions.sks */,
+				5B55C82822D787AB00CF9BF3 /* GameScene.swift */,
+				5B55C82A22D787AB00CF9BF3 /* GameViewController.swift */,
+				5B55C82C22D787AB00CF9BF3 /* Main.storyboard */,
+				5B55C82F22D787AD00CF9BF3 /* Assets.xcassets */,
+				5B55C83122D787AD00CF9BF3 /* LaunchScreen.storyboard */,
+				5B55C83422D787AD00CF9BF3 /* Info.plist */,
+			);
+			path = Braekout;
+			sourceTree = "<group>";
+		};
+		5B55C83C22D787AD00CF9BF3 /* BraekoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B55C83D22D787AD00CF9BF3 /* BraekoutTests.swift */,
+				5B55C83F22D787AD00CF9BF3 /* Info.plist */,
+			);
+			path = BraekoutTests;
+			sourceTree = "<group>";
+		};
+		5B55C84722D787AD00CF9BF3 /* BraekoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B55C84822D787AD00CF9BF3 /* BraekoutUITests.swift */,
+				5B55C84A22D787AD00CF9BF3 /* Info.plist */,
+			);
+			path = BraekoutUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B55C81E22D787AB00CF9BF3 /* Braekout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B55C84D22D787AD00CF9BF3 /* Build configuration list for PBXNativeTarget "Braekout" */;
+			buildPhases = (
+				5B55C81B22D787AB00CF9BF3 /* Sources */,
+				5B55C81C22D787AB00CF9BF3 /* Frameworks */,
+				5B55C81D22D787AB00CF9BF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Braekout;
+			productName = Braekout;
+			productReference = 5B55C81F22D787AB00CF9BF3 /* Braekout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B55C83822D787AD00CF9BF3 /* BraekoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B55C85022D787AD00CF9BF3 /* Build configuration list for PBXNativeTarget "BraekoutTests" */;
+			buildPhases = (
+				5B55C83522D787AD00CF9BF3 /* Sources */,
+				5B55C83622D787AD00CF9BF3 /* Frameworks */,
+				5B55C83722D787AD00CF9BF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B55C83B22D787AD00CF9BF3 /* PBXTargetDependency */,
+			);
+			name = BraekoutTests;
+			productName = BraekoutTests;
+			productReference = 5B55C83922D787AD00CF9BF3 /* BraekoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B55C84322D787AD00CF9BF3 /* BraekoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B55C85322D787AD00CF9BF3 /* Build configuration list for PBXNativeTarget "BraekoutUITests" */;
+			buildPhases = (
+				5B55C84022D787AD00CF9BF3 /* Sources */,
+				5B55C84122D787AD00CF9BF3 /* Frameworks */,
+				5B55C84222D787AD00CF9BF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B55C84622D787AD00CF9BF3 /* PBXTargetDependency */,
+			);
+			name = BraekoutUITests;
+			productName = BraekoutUITests;
+			productReference = 5B55C84422D787AD00CF9BF3 /* BraekoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B55C81722D787AB00CF9BF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alexander Yu";
+				TargetAttributes = {
+					5B55C81E22D787AB00CF9BF3 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					5B55C83822D787AD00CF9BF3 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 5B55C81E22D787AB00CF9BF3;
+					};
+					5B55C84322D787AD00CF9BF3 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 5B55C81E22D787AB00CF9BF3;
+					};
+				};
+			};
+			buildConfigurationList = 5B55C81A22D787AB00CF9BF3 /* Build configuration list for PBXProject "Braekout" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B55C81622D787AB00CF9BF3;
+			productRefGroup = 5B55C82022D787AB00CF9BF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B55C81E22D787AB00CF9BF3 /* Braekout */,
+				5B55C83822D787AD00CF9BF3 /* BraekoutTests */,
+				5B55C84322D787AD00CF9BF3 /* BraekoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B55C81D22D787AB00CF9BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B55C82E22D787AB00CF9BF3 /* Main.storyboard in Resources */,
+				5B55C82522D787AB00CF9BF3 /* GameScene.sks in Resources */,
+				5B55C83022D787AD00CF9BF3 /* Assets.xcassets in Resources */,
+				5B55C83322D787AD00CF9BF3 /* LaunchScreen.storyboard in Resources */,
+				5B55C82722D787AB00CF9BF3 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B55C83722D787AD00CF9BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B55C84222D787AD00CF9BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B55C81B22D787AB00CF9BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B55C82922D787AB00CF9BF3 /* GameScene.swift in Sources */,
+				5B55C82B22D787AB00CF9BF3 /* GameViewController.swift in Sources */,
+				5B55C82322D787AB00CF9BF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B55C83522D787AD00CF9BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B55C83E22D787AD00CF9BF3 /* BraekoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B55C84022D787AD00CF9BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B55C84922D787AD00CF9BF3 /* BraekoutUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B55C83B22D787AD00CF9BF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B55C81E22D787AB00CF9BF3 /* Braekout */;
+			targetProxy = 5B55C83A22D787AD00CF9BF3 /* PBXContainerItemProxy */;
+		};
+		5B55C84622D787AD00CF9BF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B55C81E22D787AB00CF9BF3 /* Braekout */;
+			targetProxy = 5B55C84522D787AD00CF9BF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B55C82C22D787AB00CF9BF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B55C82D22D787AB00CF9BF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B55C83122D787AD00CF9BF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B55C83222D787AD00CF9BF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B55C84B22D787AD00CF9BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B55C84C22D787AD00CF9BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B55C84E22D787AD00CF9BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22MXQW39R8;
+				INFOPLIST_FILE = Braekout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Bootcamp.Braekout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B55C84F22D787AD00CF9BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22MXQW39R8;
+				INFOPLIST_FILE = Braekout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Bootcamp.Braekout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B55C85122D787AD00CF9BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22MXQW39R8;
+				INFOPLIST_FILE = BraekoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Bootcamp.BraekoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Braekout.app/Braekout";
+			};
+			name = Debug;
+		};
+		5B55C85222D787AD00CF9BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22MXQW39R8;
+				INFOPLIST_FILE = BraekoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Bootcamp.BraekoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Braekout.app/Braekout";
+			};
+			name = Release;
+		};
+		5B55C85422D787AD00CF9BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22MXQW39R8;
+				INFOPLIST_FILE = BraekoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Bootcamp.BraekoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Braekout;
+			};
+			name = Debug;
+		};
+		5B55C85522D787AD00CF9BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22MXQW39R8;
+				INFOPLIST_FILE = BraekoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Bootcamp.BraekoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Braekout;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B55C81A22D787AB00CF9BF3 /* Build configuration list for PBXProject "Braekout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B55C84B22D787AD00CF9BF3 /* Debug */,
+				5B55C84C22D787AD00CF9BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B55C84D22D787AD00CF9BF3 /* Build configuration list for PBXNativeTarget "Braekout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B55C84E22D787AD00CF9BF3 /* Debug */,
+				5B55C84F22D787AD00CF9BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B55C85022D787AD00CF9BF3 /* Build configuration list for PBXNativeTarget "BraekoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B55C85122D787AD00CF9BF3 /* Debug */,
+				5B55C85222D787AD00CF9BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B55C85322D787AD00CF9BF3 /* Build configuration list for PBXNativeTarget "BraekoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B55C85422D787AD00CF9BF3 /* Debug */,
+				5B55C85522D787AD00CF9BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B55C81722D787AB00CF9BF3 /* Project object */;
+}
