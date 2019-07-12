@@ -18,13 +18,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bricks = [SKSpriteNode]()
     var brickCount = Int()
     var label = SKLabelNode()
-    var started = Bool()
+    var scoreLabel = SKLabelNode()
+    var started = false
+    var score = 0
     
     override func didMove(to view: SKView) {
         createBackground()
         makeLoseZone()
         makeLabel()
-        started = false
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
     }
@@ -119,6 +120,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         label.fontSize = 30
         label.text = "Press To Start The Game"
         addChild(label)
+        scoreLabel.position = CGPoint(x:frame.midX, y:frame.midY - 20)
+        scoreLabel.fontSize = 20
+        scoreLabel.text = "score: \(score)"
+        addChild(scoreLabel)
     }
     
     func restartScreen() {
@@ -146,6 +151,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 ball.physicsBody?.applyImpulse(CGVector(dx: 0, dy: Int.random(in: -3...3)))
             }
         }
+        scoreLabel.text = "score: \(score)"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -156,6 +162,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             label.alpha = 0
             ball.physicsBody?.isDynamic = true
             ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: 5))
+            score = 0
         }
         for touch in touches {
             let location = touch.location(in: self)
@@ -177,13 +184,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 contact.bodyB.node?.name == "brick\(i)" {
                 if bricks[i].color == .green {
                     bricks[i].color = .blue
+                    score += 1
                 }
                 else if bricks[i].color == .blue {
                     bricks[i].color = UIColor.red
+                    score += 1
                 }
                 else if bricks[i].color == .red {
                     bricks[i].removeFromParent()
                     brickCount -= 1
+                    score += 1
                 }
             }
             if contact.bodyA.node?.name == "loseZone" ||
