@@ -18,14 +18,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bricks = [SKSpriteNode]()
     var brickCount = Int()
     var label = SKLabelNode()
+    var started = Bool()
     
     override func didMove(to view: SKView) {
         createBackground()
-        makeBall()
-        makePaddle()
-        makeBricks()
         makeLoseZone()
         makeLabel()
+        makeBricks()
+        started = false
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         ball.physicsBody?.isDynamic = true
@@ -125,24 +125,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        var xSpeed = ball.physicsBody!.velocity.dx
-        xSpeed = sqrt(xSpeed * xSpeed)
-        if xSpeed < 10 {
-            ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: 0))
-        }
-        var ySpeed = ball.physicsBody!.velocity.dy
-        ySpeed = sqrt(ySpeed * ySpeed)
-        if ySpeed < 10 {
-            ball.physicsBody?.applyImpulse(CGVector(dx: 0, dy: Int.random(in: -3...3)))
+        if started == true {
+            var xSpeed = ball.physicsBody!.velocity.dx
+            xSpeed = sqrt(xSpeed * xSpeed)
+            if xSpeed < 10 {
+                ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: 0))
+            }
+            var ySpeed = ball.physicsBody!.velocity.dy
+            ySpeed = sqrt(ySpeed * ySpeed)
+            if ySpeed < 10 {
+                ball.physicsBody?.applyImpulse(CGVector(dx: 0, dy: Int.random(in: -3...3)))
+            }
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if started == false {
+            makeBall()
+            makePaddle()
+            label.alpha = 0
+            ball.physicsBody?.isDynamic = true
+        }
         for touch in touches {
             let location = touch.location(in: self)
             paddle.position.x = location.x
         }
-        
+        started = true
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -170,11 +178,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if contact.bodyA.node?.name == "loseZone" ||
                 contact.bodyB.node?.name == "loseZone" {
                 ball.removeFromParent()
-                }
             }
-//        if brickCount <= 15 {
-//            ball.removeFromParent()
-//        }
+        }
+        //        if brickCount <= 15 {
+        //            ball.removeFromParent()
+        //        }
         if brickCount <= 0 {
             ball.removeFromParent()
         }
