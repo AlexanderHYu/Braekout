@@ -24,12 +24,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createBackground()
         makeLoseZone()
         makeLabel()
-        makeBricks()
         started = false
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-        ball.physicsBody?.isDynamic = true
-        ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: 5))
     }
     
     func createBackground() {
@@ -124,6 +121,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(label)
     }
     
+    func restartScreen() {
+        started = false
+        label.alpha = 1
+        label.text = "Tap To Restart"
+        for i in 0..<bricks.count {
+            bricks[i].removeFromParent()
+        }
+        ball.removeFromParent()
+        paddle.removeFromParent()
+        bricks.removeAll()
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         if started == true {
             var xSpeed = ball.physicsBody!.velocity.dx
@@ -143,8 +152,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if started == false {
             makeBall()
             makePaddle()
+            makeBricks()
             label.alpha = 0
             ball.physicsBody?.isDynamic = true
+            ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: 5))
         }
         for touch in touches {
             let location = touch.location(in: self)
@@ -177,14 +188,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             if contact.bodyA.node?.name == "loseZone" ||
                 contact.bodyB.node?.name == "loseZone" {
-                ball.removeFromParent()
+                restartScreen()
             }
         }
         //        if brickCount <= 15 {
         //            ball.removeFromParent()
         //        }
         if brickCount <= 0 {
-            ball.removeFromParent()
+            restartScreen()
         }
     }
 }
