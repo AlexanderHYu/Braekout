@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var brick = SKSpriteNode()
     var loseZone = SKSpriteNode()
     var bricks = [SKSpriteNode]()
+    var brickCount = Int()
     
     override func didMove(to view: SKView) {
         createBackground()
@@ -95,14 +96,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bricks.append(brick)
         }
         for i in 0..<7 {
-            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 100, color: UIColor.green, index: i + 7)
+            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 100, color: UIColor.blue, index: i + 7)
             bricks.append(brick)
         }
         for i in 0..<7 {
-            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 150, color: UIColor.green, index: i + 14)
+            makeBrick(x: 55 * (i) + Int(frame.minX) + 40, y: Int(frame.maxY) - 150, color: UIColor.red, index: i + 14)
             bricks.append(brick)
+            brickCount = bricks.count
         }
-        print(bricks)
     }
     
     func makeLoseZone() {
@@ -146,7 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for i in 0..<21 {
             if contact.bodyA.node?.name == "brick\(i)" ||
                 contact.bodyB.node?.name == "brick\(i)" {
-                if bricks[i].color == (UIColor.green) {
+                if bricks[i].color == .green {
                     bricks[i].color = .blue
                 }
                 else if bricks[i].color == .blue {
@@ -154,14 +155,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
                 else if bricks[i].color == .red {
                     bricks[i].removeFromParent()
+                    brickCount -= 1
                 }
             }
             if contact.bodyA.node?.name == "loseZone" ||
                 contact.bodyB.node?.name == "loseZone" {
                 ball.removeFromParent()
+                }
             }
+//        if brickCount <= 15 {
+//            ball.removeFromParent()
         }
-        
+        if brickCount <= 0 {
+            ball.removeFromParent()
+        }
     }
-    
 }
