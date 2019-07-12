@@ -17,6 +17,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var loseZone = SKSpriteNode()
     var bricks = [SKSpriteNode]()
     var brickCount = Int()
+    var label = SKLabelNode()
     
     override func didMove(to view: SKView) {
         createBackground()
@@ -24,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         makePaddle()
         makeBricks()
         makeLoseZone()
+        makeLabel()
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         ball.physicsBody?.isDynamic = true
@@ -115,6 +117,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(loseZone)
     }
     
+    func makeLabel() {
+        label.position = CGPoint(x: frame.midX, y: frame.midY)
+        label.fontSize = 30
+        label.text = "Press To Start The Game"
+        addChild(label)
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         var xSpeed = ball.physicsBody!.velocity.dx
         xSpeed = sqrt(xSpeed * xSpeed)
@@ -165,7 +174,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
 //        if brickCount <= 15 {
 //            ball.removeFromParent()
-        }
+//        }
         if brickCount <= 0 {
             ball.removeFromParent()
         }
