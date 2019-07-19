@@ -21,6 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabel = SKLabelNode()
     var started = false
     var score = 0
+    var win = false
     
     override func didMove(to view: SKView) {
         createBackground()
@@ -72,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func makePaddle() {
-        paddle = SKSpriteNode(color: UIColor.white, size: CGSize(width: frame.width/4, height: 20))
+        paddle = SKSpriteNode(color: UIColor.white, size: CGSize(width: frame.width, height: 20))
         paddle.position = CGPoint(x: frame.midX, y: frame.minY + 125)
         paddle.name = "paddle"
         paddle.physicsBody = SKPhysicsBody(rectangleOf: paddle.size)
@@ -129,7 +130,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func restartScreen() {
         started = false
         label.alpha = 1
-        label.text = "Tap To Restart"
+        if win == false {
+            label.text = "Tap To Restart"
+        }
+        else {
+            label.text = "You Win!"
+        }
         for i in 0..<bricks.count {
             bricks[i].removeFromParent()
         }
@@ -159,6 +165,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             makeBall()
             makePaddle()
             makeBricks()
+            win = false
             label.alpha = 0
             ball.physicsBody?.isDynamic = true
             ball.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -3...3), dy: 5))
@@ -201,10 +208,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 restartScreen()
             }
         }
-        //        if brickCount <= 15 {
-        //            ball.removeFromParent()
-        //        }
+                if brickCount <= 15 {
+                    win = true
+                    restartScreen()
+                }
         if brickCount <= 0 {
+            win = true
             restartScreen()
         }
     }
